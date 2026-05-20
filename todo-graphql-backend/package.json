@@ -1,0 +1,28 @@
+{
+  "name": "todo-graphql-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@apollo/server": "^5.5.1",
+    "dotenv": "^17.4.2",
+    "graphql": "^16.14.0",
+    "graphql-tag": "^2.12.6",
+    "mongodb": "^7.2.0",
+    "mongoose": "^9.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
