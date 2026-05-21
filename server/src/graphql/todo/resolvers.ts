@@ -1,7 +1,7 @@
 // query controllers
 import { Todo } from "../../models/Todo";
 
-export const resolvers = {
+export const todoResolvers = {
   Query: {
     getTodos: async () => await Todo.find(),
     getTodo: async (_: any, { id }: { id: string }) => await Todo.findById(id),
