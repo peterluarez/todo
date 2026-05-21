@@ -3,9 +3,8 @@ import { Todo } from "../../models/Todo";
 
 export const resolvers = {
   Query: {
-    todos: async () => await Todo.find(),
-    todoSearch: async (_: any, { id }: { id: string }) =>
-      await Todo.findById(id),
+    getTodos: async () => await Todo.find(),
+    getTodo: async (_: any, { id }: { id: string }) => await Todo.findById(id),
   },
 
   Mutation: {
@@ -17,7 +16,9 @@ export const resolvers = {
       _: any,
       { id, completed }: { id: string; completed: boolean },
     ) => await Todo.findByIdAndUpdate(id, { completed }, { new: true }),
-    deleteTodo: async (_: any, { id }: { id: string }) =>
-      await Todo.findByIdAndDelete(id),
+    deleteTodo: async (_: any, { id }: { id: string }) => {
+      await Todo.findByIdAndDelete(id);
+      return "successfully delete a data!";
+    },
   },
 };
