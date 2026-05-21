@@ -9,13 +9,13 @@ export const typeDefs = gql`
   }
 
   type Query {
-    todos: [Todo] 
-    todoSearch(id: ID!): Todo
+    getTodos: [Todo] 
+    getTodo(id: ID!): Todo
   }
 
   type Mutation {
     createTodo(title: String!): Todo
     updateTodo(id: ID!, completed: Boolean!): Todo
-    deleteTodo(id: ID!): Todo
+    deleteTodo(id: ID!): String
   }
 `;
