@@ -1,7 +1,7 @@
 // routes/router
 import { gql } from "graphql-tag";
 
-export const typeDefs = gql`
+export const todoTypeDefs = gql`
   type Todo {
     id: ID!
     title: String!
